@@ -1,7 +1,8 @@
-package com.maasbodev.punkbeer
+package com.maasbodev.punkbeer.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.maasbodev.punkbeer.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

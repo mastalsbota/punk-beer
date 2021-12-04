@@ -1,7 +1,7 @@
 package com.maasbodev.punkbeer.ui.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.maasbodev.punkbeer.R
 
 class MainActivity : AppCompatActivity() {

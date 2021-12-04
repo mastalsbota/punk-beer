@@ -5,6 +5,6 @@ import retrofit2.http.GET
 interface BeerDbService {
 
     @GET("beers")
-    suspend fun listAllBeersAsync() : BeersDbResult
+    suspend fun listAllBeersAsync(): BeersDbResult
 
 }

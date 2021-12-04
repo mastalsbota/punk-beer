@@ -5,7 +5,7 @@ import com.maasbodev.domain.Beer
 import com.maasbodev.punkbeer.data.toDomainBeer
 
 
-class BeerDbDataSource: RemoteDataSource {
+class BeerDbDataSource : RemoteDataSource {
 
     override suspend fun getAllBeers(): List<Beer> =
         BeerDb.service

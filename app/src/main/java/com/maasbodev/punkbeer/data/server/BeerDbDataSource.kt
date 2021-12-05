@@ -13,4 +13,10 @@ class BeerDbDataSource : RemoteDataSource {
             .results
             .map { it.toDomainBeer() }
 
+    override suspend fun searchBeer(search: String): List<Beer> =
+        BeerDb.service
+            .searchBeer(search)
+            .results
+            .map { it.toDomainBeer() }
+
 }

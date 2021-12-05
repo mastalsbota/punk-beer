@@ -22,6 +22,10 @@ class RoomDataSource(db: BeerDatabase) : LocalDataSource {
         beerDao.getAllBeers().map { it.toDomainBeer() }
     }
 
+    override suspend fun searchBeer(search: String): List<Beer> = withContext(Dispatchers.IO) {
+        beerDao.searchBeer(search).map { it.toDomainBeer() }
+    }
+
     override suspend fun getBeerById(id: Int): Beer = withContext(Dispatchers.IO) {
         beerDao.getBeerById(id).toDomainBeer()
     }

@@ -11,6 +11,9 @@ interface BeerDao {
     @Query("SELECT * FROM beer")
     fun getAllBeers(): List<Beer>
 
+    @Query("SELECT * FROM Beer WHERE name LIKE :search")
+    fun searchBeer(search: String): List<Beer>
+
     @Query("SELECT * FROM Beer WHERE id = :id")
     fun getBeerById(id: Int): Beer
 

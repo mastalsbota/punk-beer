@@ -19,6 +19,16 @@ class BeersRepository(
         return localDataSource.getAllBeers()
     }
 
+    suspend fun searchBeer(search: String): List<Beer> {
+
+        if (localDataSource.isEmpty()) {
+            val beers = remoteDataSource.searchBeer(search)
+            localDataSource.saveBeers(beers)
+        }
+
+        return localDataSource.searchBeer(search)
+    }
+
     suspend fun getBeerById(id: Int): Beer = localDataSource.getBeerById(id)
 
 }

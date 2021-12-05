@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:fitsSystemWindows="true"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/Theme.PunkBeer.DarkOverlay"
-        android:fitsSystemWindows="true">
+        android:fitsSystemWindows="true"
+        android:theme="@style/Theme.PunkBeer.DarkOverlay">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
@@ -52,6 +52,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                tools:text="Lorem ipsum" />
+
+            <com.maasbodev.punkbeer.ui.detail.BeerDetailInfoView
+                android:id="@+id/beerDetailInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/lightBackground"
+                android:lineSpacingMultiplier="1.5"
+                android:padding="16dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:text="Lorem ipsum" />
 

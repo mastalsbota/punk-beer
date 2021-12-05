@@ -2,6 +2,7 @@ package com.maasbodev.punkbeer.ui.main
 
 import com.maasbodev.data.repository.BeersRepository
 import com.maasbodev.usecases.GetAllBeers
+import com.maasbodev.usecases.SearchBeer
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,5 +16,9 @@ class MainActivityModule {
     @Provides
     @ViewModelScoped
     fun getAllBeersProvider(beersRepository: BeersRepository) = GetAllBeers(beersRepository)
+
+    @Provides
+    @ViewModelScoped
+    fun searchBeerProvider(beersRepository: BeersRepository) = SearchBeer(beersRepository)
 
 }

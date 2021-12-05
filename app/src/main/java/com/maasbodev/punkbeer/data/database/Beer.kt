@@ -22,9 +22,9 @@ data class Beer(
     val attenuation_level: Double,
     val volume: String,
     val boil_volume: String,
-    val method: List<String>,
-    val ingredients: List<String>,
-    val food_pairing: List<String>,
+    val method: String,
+    val ingredients: String,
+    val food_pairing: String,
     val brewers_tips: String,
     val contributed_by: String
 )

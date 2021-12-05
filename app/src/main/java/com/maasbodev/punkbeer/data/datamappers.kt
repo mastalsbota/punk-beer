@@ -22,9 +22,9 @@ fun Beer.toRoomBeer(): RoomBeer =
         attenuation_level = attenuation_level,
         volume = volume,
         boil_volume = boil_volume,
-        method = method,
-        ingredients = ingredients,
-        food_pairing = food_pairing,
+        method = method.joinToString(separator = System.lineSeparator()),
+        ingredients = ingredients.joinToString(separator = System.lineSeparator()),
+        food_pairing = food_pairing.joinToString(separator = System.lineSeparator()),
         brewers_tips = brewers_tips,
         contributed_by = contributed_by
     )
@@ -47,9 +47,9 @@ fun RoomBeer.toDomainBeer(): Beer =
         attenuation_level = attenuation_level,
         volume = volume,
         boil_volume = boil_volume,
-        method = method,
-        ingredients = ingredients,
-        food_pairing = food_pairing,
+        method = listOf(method),
+        ingredients = listOf(ingredients),
+        food_pairing = listOf(food_pairing),
         brewers_tips = brewers_tips,
         contributed_by = contributed_by
     )
